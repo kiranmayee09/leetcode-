@@ -9,7 +9,7 @@ class Solution:
 
             s = new_s
 
-        return s[0] == s[1] """
+        return s[0] == s[1] 
 
         while len(s) > 2:
             new_s = ""
@@ -22,4 +22,16 @@ class Solution:
 
             s = new_s
 
-        return s[0] == s[1]
+        return s[0] == s[1]  """
+
+        nums = [int(x) for x in s]
+
+        while len(nums) > 2:
+            new_nums = []
+
+            for i in range(len(nums) - 1):
+                new_nums.append((nums[i] + nums[i + 1]) % 10)
+
+            nums = new_nums
+
+        return nums[0] == nums[1]
